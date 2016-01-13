@@ -1,3 +1,9 @@
 <h2 id="title">Welcome to Ember</h2>
 
+<p>From application, this is a list of links</p>
+
+{{#each model as |game|}}
+	<li>{{#link-to 'games' game.id}}{{game.text}}{{/link-to}}</li>
+{{/each}}
+
 {{outlet}}

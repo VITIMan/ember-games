@@ -5,5 +5,14 @@
 
     Setting `disableAnalytics` to true will prevent any data from being sent.
   */
-  "disableAnalytics": false
+  "disableAnalytics": true,
+  "contentSecurityPolicy": {
+    "default-src": ["'none'"],
+    "script-src":  ["'self'"],
+    "font-src":    ["'self'"],
+    "connect-src": ["'self'", "http://127.0.0.1:8000"],
+    "img-src":     ["'self'"],
+    "style-src":   ["'self'"],
+    "media-src":   ["'self'"]
+  }
 }
